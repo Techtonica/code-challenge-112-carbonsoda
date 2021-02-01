@@ -24,10 +24,13 @@
 // ```
 
 function createCounter(startingValue) {
-  const counter = startingValue;
+  let counter = startingValue;
   const newObject = {
     getValue: function() {
       return counter;
+    },
+    increment: function(n=1) {
+      counter+= n;
     }
   };
   return newObject;
